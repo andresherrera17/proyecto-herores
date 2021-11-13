@@ -1,5 +1,5 @@
 <h1> Héroes <small>Marvel y Dc </small> </h1>
 
 <div class="card-columns">
-  <app-heroe-tarjeta [heroe]="her" *ngFor="let her of heroes"></app-heroe-tarjeta>
+  <app-heroe-tarjeta [heroe]="her" [index]="i" *ngFor="let her of heroes; let i = index"></app-heroe-tarjeta>
 </div>
