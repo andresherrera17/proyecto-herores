@@ -1,14 +1,5 @@
-<div class="card-columns" *ngFor="let her of heroes">
-  <div class="card animated fadeIn fast">
-    <img class="card-img-top img-fluid" [src]="her.img" [alt]="her.nombre" />
-    <div class="card-body">
-      <h4 class="card-title"> {{ her.nombre }} </h4>
-      <p class="card-text"> {{ her.bio }} </p>
-      <p class="card-text"> <small class="text-muted"> {{ her.aparicion }} </small></p>
+<h1> Héroes <small>Marvel y Dc </small> </h1>
 
-      <button type="button" class="btn btn-outline-primary btn-block">
-        Ver más...
-      </button>
-    </div>
-  </div>
+<div class="card-columns">
+  <app-heroe-tarjeta [heroe]="her" *ngFor="let her of heroes"></app-heroe-tarjeta>
 </div>
