@@ -69,4 +69,8 @@ export class HeroesService {
   getHeroe(index: string): Heroe {
     return this.heroes[index];
   }
+
+  // se debe crear una funcion que busque heroes por un termino y me retorne todos los heroes
+  // que contengan ese termino
+
 }

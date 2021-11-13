@@ -11,6 +11,10 @@ body{
   width: 120px;
 }
 
+.formularioBuscar{
+  display: flex;
+}
+
 
 /* Animaciones */
 

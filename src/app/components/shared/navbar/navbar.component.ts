@@ -12,4 +12,8 @@ export class NavbarComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  buscarHeroe(termino: string) {
+    //1. Se debe redireccionar al componente buscar enviando por url el termino
+    console.log(termino);
+  }
 }
