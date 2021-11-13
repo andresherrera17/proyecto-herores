@@ -1,3 +1,5 @@
-<div class="card animated fadeIn fast" *ngFor="let her of heroes">
-  <img class="card-img-top img-fluid" [src]="her.img" [alt]="her.nombre" />
+<div class="card-columns" *ngFor="let her of heroes">
+  <div class="card animated fadeIn fast">
+    <img class="card-img-top img-fluid" [src]="her.img" [alt]="her.nombre" />
+  </div>
 </div>
