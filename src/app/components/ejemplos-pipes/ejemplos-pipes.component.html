@@ -17,8 +17,23 @@
       <tbody>
         <tr>
           <td> {{ nombre }} </td>
-          <td> </td>
+          <td> uppercase </td>
+          <td> {{ nombre | uppercase }} </td>
+        </tr>
+        <tr>
           <td> {{ nombre }} </td>
+          <td> lowercase </td>
+          <td> {{ nombre | lowercase }} </td>
+        </tr>
+        <tr>
+          <td> {{ nombre }} </td>
+          <td> slice </td>
+          <td> {{ nombre | slice:2 }} </td>
+        </tr>
+        <tr>
+          <td> {{ nombre }} </td>
+          <td> slice </td>
+          <td> {{ nombre | slice:2 }} </td>
         </tr>
       </tbody>
     </table>
