@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Heroe } from '../interfaces/heroe.interface';
+import { Observable, Subject } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -70,7 +71,15 @@ export class HeroesService {
     return this.heroes[index];
   }
 
+
   // se debe crear una funcion que busque heroes por un termino y me retorne todos los heroes
   // que contengan ese termino
+  buscarHeroe(termino: string): Heroe[] {
+    const consulta = this.heroes.map((heroe, index) => {
+      heroe.idx = index
+      return heroe
+    }).filter(heroe => heroe.nombre.toLowerCase().trim().includes(termino.toLowerCase().trim()))
 
+    return consulta
+  }
 }

@@ -15,6 +15,8 @@ import { BuscadorComponent } from './components/buscador/buscador.component';
 import { HeroeComponent } from './components/heroe/heroe.component';
 import { HeroeTarjetaComponent } from './components/heroe-tarjeta/heroe-tarjeta.component';
 import { NavbarComponent } from './components/shared/navbar/navbar.component';
+import { ListaComponent } from './components/observables/lista/lista.component';
+import { EjemplosPipesComponent } from './components/ejemplos-pipes/ejemplos-pipes.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +27,9 @@ import { NavbarComponent } from './components/shared/navbar/navbar.component';
     BuscadorComponent,
     HeroeComponent,
     HeroeTarjetaComponent,
-    NavbarComponent
+    NavbarComponent,
+    ListaComponent,
+    EjemplosPipesComponent
   ],
   imports: [
     BrowserModule,
