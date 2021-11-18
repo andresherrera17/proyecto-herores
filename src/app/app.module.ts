@@ -21,7 +21,7 @@ import { MayusculasPipe } from './pipes/mayusculas.pipe';
 import { ContrasenaPipe } from './pipes/contrasena.pipe';
 
 @NgModule({
-  declarations: [
+  declarations: [ //componentes, pipes
     AppComponent,
     HomeComponent,
     HeroesComponent,
@@ -35,11 +35,11 @@ import { ContrasenaPipe } from './pipes/contrasena.pipe';
     MayusculasPipe,
     ContrasenaPipe
   ],
-  imports: [
+  imports: [ // librerias, modulos propios de angular
     BrowserModule,
     AppRoutingModule
   ],
   providers: [HeroesService],//servicios , inspectores
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent] //componente que se ejecuta primero
 })
 export class AppModule { }
