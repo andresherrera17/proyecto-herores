@@ -1,7 +1,8 @@
 //angular
-import { NgModule } from '@angular/core';
+import { LOCALE_ID, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
+import { registerLocaleData } from '@angular/common';
 
 //components
 import { AppComponent } from './app.component';
@@ -21,6 +22,11 @@ import { MayusculasPipe } from './pipes/mayusculas.pipe';
 import { ContrasenaPipe } from './pipes/contrasena.pipe';
 import { CapitalizarPipe } from './pipes/capitalizar.pipe';
 import { DomSeguroPipe } from './pipes/dom-seguro.pipe';
+import localEs from '@angular/common/locales/es';
+import localFr from '@angular/common/locales/fr';
+
+registerLocaleData(localEs);
+registerLocaleData(localFr);
 
 @NgModule({
   declarations: [ //componentes, pipes
@@ -43,7 +49,13 @@ import { DomSeguroPipe } from './pipes/dom-seguro.pipe';
     BrowserModule,
     AppRoutingModule
   ],
-  providers: [HeroesService],//servicios , inspectores
+  providers: [
+    HeroesService,
+    {
+      provide: LOCALE_ID,
+      useValue: 'es'
+    }
+  ],//servicios , inspectores
   bootstrap: [AppComponent] //componente que se ejecuta primero
 })
 export class AppModule { }
