@@ -16,6 +16,13 @@ export class EjemplosPipesComponent implements OnInit {
   fecha: Date = new Date();
   activar: boolean = false;
 
+
+  valorPromesa = new Promise<string>((resolve) => {
+    setTimeout(() => {
+      resolve('llego la data')
+    }, 5000)
+  });
+
   constructor() { }
 
   ngOnInit(): void {
