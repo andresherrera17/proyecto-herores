@@ -10,9 +10,10 @@ export class EjemplosPipesComponent implements OnInit {
 
   nombre: string = 'Andres Herrera';
   PI: number = Math.PI;
-  porcentaje: number = 0.234;
+  porcentaje: number = 0.236;
   salario: number = 1234.5;
   fecha: Date = new Date();
+  activar: boolean = false;
 
   constructor() { }
 

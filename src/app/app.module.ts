@@ -18,6 +18,7 @@ import { NavbarComponent } from './components/shared/navbar/navbar.component';
 import { ListaComponent } from './components/observables/lista/lista.component';
 import { EjemplosPipesComponent } from './components/ejemplos-pipes/ejemplos-pipes.component';
 import { MayusculasPipe } from './pipes/mayusculas.pipe';
+import { ContrasenaPipe } from './pipes/contrasena.pipe';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import { MayusculasPipe } from './pipes/mayusculas.pipe';
     NavbarComponent,
     ListaComponent,
     EjemplosPipesComponent,
-    MayusculasPipe
+    MayusculasPipe,
+    ContrasenaPipe
   ],
   imports: [
     BrowserModule,
