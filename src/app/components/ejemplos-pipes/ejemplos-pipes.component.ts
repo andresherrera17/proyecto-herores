@@ -9,6 +9,10 @@ import { Component, OnInit } from '@angular/core';
 export class EjemplosPipesComponent implements OnInit {
 
   nombre: string = 'Andres Herrera';
+  PI: number = Math.PI;
+  porcentaje: number = 0.234;
+  salario: number = 1234.5;
+  fecha: Date = new Date();
 
   constructor() { }
 
