@@ -17,6 +17,7 @@ import { HeroeTarjetaComponent } from './components/heroe-tarjeta/heroe-tarjeta.
 import { NavbarComponent } from './components/shared/navbar/navbar.component';
 import { ListaComponent } from './components/observables/lista/lista.component';
 import { EjemplosPipesComponent } from './components/ejemplos-pipes/ejemplos-pipes.component';
+import { MayusculasPipe } from './pipes/mayusculas.pipe';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { EjemplosPipesComponent } from './components/ejemplos-pipes/ejemplos-pip
     HeroeTarjetaComponent,
     NavbarComponent,
     ListaComponent,
-    EjemplosPipesComponent
+    EjemplosPipesComponent,
+    MayusculasPipe
   ],
   imports: [
     BrowserModule,
