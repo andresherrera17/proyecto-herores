@@ -120,8 +120,30 @@
           <td> </td>
           <td> {{ valorPromesa | async }} </td>
         </tr>
+
+        <tr>
+          <td> Json {{ heroe }} </td>
+          <td> </td>
+          <td>
+            <pre>
+              {{ heroe | json }}
+            </pre>
+          </td>
+        </tr>
       </tbody>
     </table>
+
+    <h3 class="mt-4"> DomSeguro </h3>
+    <hr />
+
+    <div class="row mb-5">
+      <div class="col">
+        <iframe width="560" height="315" [src]="video | domSeguro" title="YouTube video player" frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen></iframe>
+      </div>
+    </div>
+
 
   </div>
 </div>

@@ -20,6 +20,7 @@ import { EjemplosPipesComponent } from './components/ejemplos-pipes/ejemplos-pip
 import { MayusculasPipe } from './pipes/mayusculas.pipe';
 import { ContrasenaPipe } from './pipes/contrasena.pipe';
 import { CapitalizarPipe } from './pipes/capitalizar.pipe';
+import { DomSeguroPipe } from './pipes/dom-seguro.pipe';
 
 @NgModule({
   declarations: [ //componentes, pipes
@@ -35,7 +36,8 @@ import { CapitalizarPipe } from './pipes/capitalizar.pipe';
     EjemplosPipesComponent,
     MayusculasPipe,
     ContrasenaPipe,
-    CapitalizarPipe
+    CapitalizarPipe,
+    DomSeguroPipe
   ],
   imports: [ // librerias, modulos propios de angular
     BrowserModule,

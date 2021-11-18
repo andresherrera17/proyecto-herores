@@ -23,6 +23,18 @@ export class EjemplosPipesComponent implements OnInit {
     }, 5000)
   });
 
+
+  heroe = {
+    nombre: 'logan',
+    edad: 1000,
+    otrosNombres: {
+      nombre1: 'wolverine',
+      nombre2: 'viejo'
+    }
+  }
+
+  video: string = 'https://www.youtube.com/embed/qBtB-xcJp4c';
+
   constructor() { }
 
   ngOnInit(): void {
