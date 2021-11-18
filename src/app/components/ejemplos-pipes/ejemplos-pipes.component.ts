@@ -15,6 +15,7 @@ export class EjemplosPipesComponent implements OnInit {
   salario: number = 1234.5;
   fecha: Date = new Date();
   activar: boolean = false;
+  idioma: string = 'fr';
 
 
   valorPromesa = new Promise<string>((resolve) => {
