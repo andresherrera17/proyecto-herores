@@ -19,6 +19,7 @@ import { ListaComponent } from './components/observables/lista/lista.component';
 import { EjemplosPipesComponent } from './components/ejemplos-pipes/ejemplos-pipes.component';
 import { MayusculasPipe } from './pipes/mayusculas.pipe';
 import { ContrasenaPipe } from './pipes/contrasena.pipe';
+import { CapitalizarPipe } from './pipes/capitalizar.pipe';
 
 @NgModule({
   declarations: [ //componentes, pipes
@@ -33,7 +34,8 @@ import { ContrasenaPipe } from './pipes/contrasena.pipe';
     ListaComponent,
     EjemplosPipesComponent,
     MayusculasPipe,
-    ContrasenaPipe
+    ContrasenaPipe,
+    CapitalizarPipe
   ],
   imports: [ // librerias, modulos propios de angular
     BrowserModule,
