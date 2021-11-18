@@ -18,10 +18,16 @@ import { HeroeTarjetaComponent } from './components/heroe-tarjeta/heroe-tarjeta.
 import { NavbarComponent } from './components/shared/navbar/navbar.component';
 import { ListaComponent } from './components/observables/lista/lista.component';
 import { EjemplosPipesComponent } from './components/ejemplos-pipes/ejemplos-pipes.component';
+
+
+//Pipes
 import { MayusculasPipe } from './pipes/mayusculas.pipe';
 import { ContrasenaPipe } from './pipes/contrasena.pipe';
 import { CapitalizarPipe } from './pipes/capitalizar.pipe';
 import { DomSeguroPipe } from './pipes/dom-seguro.pipe';
+
+
+//Idiomas
 import localEs from '@angular/common/locales/es';
 import localFr from '@angular/common/locales/fr';
 
