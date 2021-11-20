@@ -26,11 +26,14 @@ export class FormularioNgmodelComponent implements OnInit {
   }
 
   guardar(form: NgForm) {
-    console.log(form);
+    if (form.valid) {
+      sessionStorage.setItem('form', JSON.stringify(form.value));
+    }
   }
 
-  cambiarValorPais(valorPais: any) {
-    console.log(valorPais)
+  getPersona() {
+    let persona = sessionStorage.getItem('form')
+    console.log(JSON.parse(persona));
   }
 
 }
