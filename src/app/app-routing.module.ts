@@ -6,8 +6,10 @@ import { EjemplosPipesComponent } from './components/ejemplos-pipes/ejemplos-pip
 import { HeroeComponent } from './components/heroe/heroe.component';
 import { HeroesComponent } from './components/heroes/heroes.component';
 import { HomeComponent } from './components/home/home.component';
+import { LoginComponent } from './components/login/login.component';
 
 const routes: Routes = [
+  { path: 'login', component: LoginComponent },
   { path: 'home', component: HomeComponent },
   { path: 'about', component: AboutComponent },
   { path: 'heroes', component: HeroesComponent },

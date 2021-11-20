@@ -13,6 +13,9 @@
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item">
+        <a class="nav-link" routerLinkActive='active' [routerLink]="['login']">Login</a>
+      </li>
+      <li class="nav-item">
         <a class="nav-link" routerLinkActive='active' [routerLink]="['home']">Home</a>
       </li>
       <li class="nav-item">
@@ -27,9 +30,13 @@
     </ul>
   </div>
 
-  <div class="col-md-5 formularioBuscar">
+  <div class="col-md-3 formularioBuscar">
     <input class="form-control mr-sm-2" type="text" placeholder="Buscar héroe" #buscarTexto />
     <button (click)="buscarHeroe(buscarTexto.value)" class="btn btn-putline-primary my-2 my-sm-0">Buscar</button>
+  </div>
+
+  <div class="col-md-2" style="color: #fff">
+    <p> {{ persona }} </p>
   </div>
 
 
