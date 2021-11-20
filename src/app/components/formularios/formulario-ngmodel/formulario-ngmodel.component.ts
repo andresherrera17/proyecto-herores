@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { NgForm } from '@angular/forms';
 import { PaisService } from 'src/app/services/pais.service';
 
 @Component({
@@ -8,6 +9,8 @@ import { PaisService } from 'src/app/services/pais.service';
 })
 export class FormularioNgmodelComponent implements OnInit {
 
+  nombre: string = "";
+
   constructor(private _paisService: PaisService) { }
 
   ngOnInit(): void {
@@ -16,6 +19,8 @@ export class FormularioNgmodelComponent implements OnInit {
     })
   }
 
-
+  guardar(form: NgForm) {
+    console.log(form);
+  }
 
 }

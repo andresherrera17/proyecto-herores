@@ -36,6 +36,7 @@ import { LimitStringPipe } from './pipes/limit-string.pipe';
 import localEs from '@angular/common/locales/es';
 import localFr from '@angular/common/locales/fr';
 import { FormularioNgmodelComponent } from './components/formularios/formulario-ngmodel/formulario-ngmodel.component';
+import { FormsModule } from '@angular/forms';
 
 registerLocaleData(localEs);
 registerLocaleData(localFr);
@@ -64,6 +65,7 @@ registerLocaleData(localFr);
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
+    FormsModule
   ],
   providers: [
     HeroesService,
