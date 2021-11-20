@@ -11,7 +11,6 @@ import { PaisService } from 'src/app/services/pais.service';
 export class FormularioNgmodelComponent implements OnInit {
 
   pais: any[] = [];
-  valorPais: string;
 
   constructor(private _paisService: PaisService) { }
 
@@ -28,7 +27,10 @@ export class FormularioNgmodelComponent implements OnInit {
 
   guardar(form: NgForm) {
     console.log(form);
-    console.log(this.valorPais);
+  }
+
+  cambiarValorPais(valorPais: any) {
+    console.log(valorPais)
   }
 
 }

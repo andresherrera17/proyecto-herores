@@ -39,11 +39,14 @@
     <div class="form-group">
       <label class="col-2 col-form-label">Pais</label>
       <div class="col-8">
-        <select class="form-control" name="pais" [(ngModel)]="valorPais" required>
+        <select class="form-control" name="valorPais" ngModel required #valorPais="ngModel">
           <option *ngFor="let elem of pais" [value]="elem.codigo">
             {{ elem.nombre }}
           </option>
         </select>
+        <small *ngIf="valorPais.invalid && valorPais.touched" class="form-text text-danger">
+          El pais es obligatorio
+        </small>
       </div>
     </div>
 
