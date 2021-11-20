@@ -27,6 +27,9 @@ export class HeroesComponent implements OnInit {
     });
   }
 
+  agregar() {
+    this._heroesServices.addHeroes(this.heroe);
+  }
 
 
 }
