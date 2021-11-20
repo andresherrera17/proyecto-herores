@@ -3,6 +3,7 @@ import { LOCALE_ID, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { registerLocaleData } from '@angular/common';
+import { HttpClientModule } from '@angular/common/http';
 
 //components
 import { AppComponent } from './app.component';
@@ -27,6 +28,7 @@ import { MayusculasPipe } from './pipes/mayusculas.pipe';
 import { ContrasenaPipe } from './pipes/contrasena.pipe';
 import { CapitalizarPipe } from './pipes/capitalizar.pipe';
 import { DomSeguroPipe } from './pipes/dom-seguro.pipe';
+import { LimitStringPipe } from './pipes/limit-string.pipe';
 
 
 //Idiomas
@@ -52,11 +54,13 @@ registerLocaleData(localFr);
     ContrasenaPipe,
     CapitalizarPipe,
     DomSeguroPipe,
-    LoginComponent
+    LoginComponent,
+    LimitStringPipe
   ],
   imports: [ // librerias, modulos propios de angular
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule,
   ],
   providers: [
     HeroesService,
