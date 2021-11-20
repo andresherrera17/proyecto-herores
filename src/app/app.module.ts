@@ -21,6 +21,7 @@ import { EjemplosPipesComponent } from './components/ejemplos-pipes/ejemplos-pip
 //services
 import { LoginService } from './services/login.service';
 import { HeroesService } from './services/heroes.service';
+import { PaisService } from './services/pais.service';
 
 
 //Pipes
@@ -34,6 +35,7 @@ import { LimitStringPipe } from './pipes/limit-string.pipe';
 //Idiomas
 import localEs from '@angular/common/locales/es';
 import localFr from '@angular/common/locales/fr';
+import { FormularioNgmodelComponent } from './components/formularios/formulario-ngmodel/formulario-ngmodel.component';
 
 registerLocaleData(localEs);
 registerLocaleData(localFr);
@@ -55,7 +57,8 @@ registerLocaleData(localFr);
     CapitalizarPipe,
     DomSeguroPipe,
     LoginComponent,
-    LimitStringPipe
+    LimitStringPipe,
+    FormularioNgmodelComponent
   ],
   imports: [ // librerias, modulos propios de angular
     BrowserModule,
@@ -65,6 +68,7 @@ registerLocaleData(localFr);
   providers: [
     HeroesService,
     LoginService,
+    PaisService,
     {
       provide: LOCALE_ID,
       useValue: 'es'
