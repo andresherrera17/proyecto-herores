@@ -1,4 +1,4 @@
 export interface IPais {
-  nombre: string;
-  codigo: string;
+  name: string;
+  alpha3Code: string;
 }
