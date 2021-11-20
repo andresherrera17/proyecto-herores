@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { IPais } from 'src/app/interfaces/pais.interface';
+import { IPersona } from 'src/app/interfaces/persona.interface';
 import { PaisService } from 'src/app/services/pais.service';
 
 @Component({
@@ -10,7 +11,9 @@ import { PaisService } from 'src/app/services/pais.service';
 })
 export class FormularioNgmodelComponent implements OnInit {
 
-  pais: any[] = [];
+  pais: IPais[] = [];
+
+  persona: IPersona = {} as IPersona;
 
   constructor(private _paisService: PaisService) { }
 
@@ -18,17 +21,23 @@ export class FormularioNgmodelComponent implements OnInit {
     this._paisService.getPaises().subscribe(paises => {
       this.pais = paises;
 
-      this.pais.unshift({
-        nombre: '[Selecciones País]',
-        codigo: ''
+      // this.pais.unshift({
+      //   nombre: '[Selecciones País]',
+      //   codigo: ''
+      // })
+      this.pais.map((elem, i) => {
+        if (i == 1) {
+          this.persona.paisModel = elem.codigo;
+        }
+        return elem;
       })
+      debugger;
     })
   }
 
-  guardar(form: NgForm) {
-    if (form.valid) {
-      sessionStorage.setItem('form', JSON.stringify(form.value));
-    }
+  guardar() {
+    sessionStorage.setItem('form', JSON.stringify(this.persona));
+
   }
 
   getPersona() {

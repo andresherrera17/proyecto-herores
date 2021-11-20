@@ -1,52 +1,52 @@
 <h4> Formulario ngModel </h4>
 <hr />
 
-<form autocomplete="off" (ngSubmit)="guardar(form)" #form="ngForm">
+<form autocomplete="off" (ngSubmit)="guardar()" #form="ngForm">
   <div>
     <div class="form-group">
       <label class="col-2 col-form-label">Nombre</label>
       <div class="col-8">
-        <input class="form-control" type="text" name="nombre" ngModel placeholder="Nombre" required minlength="5"
-          #nombre="ngModel" />
-        <small *ngIf="nombre.invalid && nombre.touched" class="form-text text-danger">
+        <input class="form-control" type="text" name="nombre" [(ngModel)]="persona.nombre" placeholder="Nombre" required
+          minlength="5" #nombre="ngModel" />
+        <!-- <small *ngIf="nombre.invalid && nombre.touched" class="form-text text-danger">
           Ingrese 5 letras
-        </small>
+        </small> -->
       </div>
     </div>
 
     <div class="form-group">
       <label class="col-2 col-form-label">Apellido</label>
       <div class="col-8">
-        <input class="form-control" type="text" name="apellido" ngModel placeholder="Apellido" required minlength="5"
-          #apellido="ngModel" />
-        <small *ngIf="apellido.invalid && apellido.touched" class="form-text text-danger">
+        <input class="form-control" type="text" name="apellido" [(ngModel)]="persona.apellido" placeholder="Apellido"
+          required minlength="5" #apellido="ngModel" />
+        <!-- <small *ngIf="apellido.invalid && apellido.touched" class="form-text text-danger">
           Ingrese 5 letras
-        </small>
+        </small> -->
       </div>
     </div>
 
     <div class="form-group">
       <label class="col-2 col-form-label">Correo</label>
       <div class="col-8">
-        <input class="form-control" type="email" name="correo" ngModel placeholder="Correo"
+        <input class="form-control" type="email" name="correo" [(ngModel)]="persona.correo" placeholder="Correo"
           pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" required #correo="ngModel" />
-        <small *ngIf="correo.invalid && correo.touched" class="form-text text-danger">
+        <!-- <small *ngIf="correo.invalid && correo.touched" class="form-text text-danger">
           El correo es obligatorio
-        </small>
+        </small> -->
       </div>
     </div>
 
     <div class="form-group">
       <label class="col-2 col-form-label">Pais</label>
       <div class="col-8">
-        <select class="form-control" name="valorPais" ngModel required #valorPais="ngModel">
+        <select class="form-control" name="paisModel" [(ngModel)]="persona.paisModel" required>
           <option *ngFor="let elem of pais" [value]="elem.codigo">
             {{ elem.nombre }}
           </option>
         </select>
-        <small *ngIf="valorPais.invalid && valorPais.touched" class="form-text text-danger">
+        <!-- <small *ngIf="valorPais.invalid && valorPais.touched" class="form-text text-danger">
           El pais es obligatorio
-        </small>
+        </small> -->
       </div>
     </div>
 

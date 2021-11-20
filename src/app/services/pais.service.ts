@@ -17,7 +17,7 @@ export class PaisService {
       .pipe(
         map((resp: IRestCountries[]): IPais[] =>
           resp.map(
-            (pais: IRestCountries): IPais => ({ nombre: pais.name, codigo: pais.alpha3Code })
+            (pais: IRestCountries): IPais => ({ nombre: pais.name, codigo: pais.alpha3Code, selected: false })
           )
         )
       )

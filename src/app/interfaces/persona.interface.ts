@@ -1,4 +1,7 @@
 export interface IPersona {
+  pass: string,
   nombre: string;
-  pass: string;
+  apellido?: string,
+  correo?: string,
+  paisModel?: string
 }
