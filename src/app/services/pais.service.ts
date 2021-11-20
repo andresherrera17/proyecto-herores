@@ -2,6 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { IPais } from '../interfaces/pais.interface';
 import { map } from 'rxjs';
+import { IRestCountries } from '../interfaces/rest-countries.interface';
 
 @Injectable({
   providedIn: 'root'
@@ -12,11 +13,11 @@ export class PaisService {
   }
 
   getPaises() {
-    return this._http.get('https://restcountries.com/v2/lang/es')
+    return this._http.get<IRestCountries[]>('https://restcountries.com/v2/lang/es')
       .pipe(
-        map((resp: IPais[]) =>
+        map((resp: IRestCountries[]): IPais[] =>
           resp.map(
-            (pais: IPais) => ({ nombre: pais.name, codigo: pais.alpha3Code })
+            (pais: IRestCountries): IPais => ({ nombre: pais.name, codigo: pais.alpha3Code })
           )
         )
       )
