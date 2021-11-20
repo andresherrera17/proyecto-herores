@@ -1,4 +1,5 @@
 import { Component, OnChanges, OnDestroy, OnInit } from '@angular/core';
+import { Subject } from 'rxjs';
 import { Heroe } from 'src/app/interfaces/heroe.interface';
 import { HeroesService } from 'src/app/services/heroes.service';
 
@@ -33,6 +34,7 @@ export class HeroesComponent implements OnInit, OnDestroy {
 
   ngOnDestroy(): void {
     this._heroesServices.heores$.unsubscribe();
+    this._heroesServices.heores$ = new Subject();
   }
 
 

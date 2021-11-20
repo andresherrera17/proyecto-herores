@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { Subject } from 'rxjs';
 import { LoginService } from 'src/app/services/login.service';
 
 @Component({
@@ -14,6 +15,7 @@ export class NavbarComponent implements OnInit {
   constructor(private router: Router, private _loginServices: LoginService) { }
 
   ngOnInit(): void {
+    debugger;
     this._loginServices.getPersona$().subscribe(persona => {
       this.persona = persona.nombre;
     });
@@ -21,5 +23,12 @@ export class NavbarComponent implements OnInit {
 
   buscarHeroe(termino: string) {
     this.router.navigate(['/buscar', termino]);
+  }
+
+  logout() {
+    this._loginServices.persona$.unsubscribe();
+    this._loginServices.persona$ = new Subject();
+    this.persona = "";
+    this.router.navigate(['/login']);
   }
 }
