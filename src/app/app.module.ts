@@ -4,6 +4,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { registerLocaleData } from '@angular/common';
 import { HttpClientModule } from '@angular/common/http';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 //components
 import { AppComponent } from './app.component';
@@ -17,6 +18,8 @@ import { HeroeTarjetaComponent } from './components/heroe-tarjeta/heroe-tarjeta.
 import { NavbarComponent } from './components/shared/navbar/navbar.component';
 import { ListaComponent } from './components/observables/lista/lista.component';
 import { EjemplosPipesComponent } from './components/ejemplos-pipes/ejemplos-pipes.component';
+import { FormularioReactivosComponent } from './components/formularios/formulario-reactivos/formulario-reactivos.component';
+import { FormularioNgmodelComponent } from './components/formularios/formulario-ngmodel/formulario-ngmodel.component';
 
 //services
 import { LoginService } from './services/login.service';
@@ -35,8 +38,6 @@ import { LimitStringPipe } from './pipes/limit-string.pipe';
 //Idiomas
 import localEs from '@angular/common/locales/es';
 import localFr from '@angular/common/locales/fr';
-import { FormularioNgmodelComponent } from './components/formularios/formulario-ngmodel/formulario-ngmodel.component';
-import { FormsModule } from '@angular/forms';
 
 registerLocaleData(localEs);
 registerLocaleData(localFr);
@@ -59,13 +60,15 @@ registerLocaleData(localFr);
     DomSeguroPipe,
     LoginComponent,
     LimitStringPipe,
-    FormularioNgmodelComponent
+    FormularioNgmodelComponent,
+    FormularioReactivosComponent
   ],
   imports: [ // librerias, modulos propios de angular
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [
     HeroesService,
