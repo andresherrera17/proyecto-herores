@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormBuilder, FormGroup } from '@angular/forms';
 
 @Component({
   selector: 'app-formulario-reactivos',
@@ -7,9 +8,24 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FormularioReactivosComponent implements OnInit {
 
-  constructor() { }
+  formGroup: FormGroup;
+
+
+  constructor(private formBuilder: FormBuilder) { }
 
   ngOnInit(): void {
+  }
+
+  buildForm() {
+    const hoy = new Date().toISOString().substring(0, 10);
+    const name = "Andres Herrera";
+
+    this.formGroup = this.formBuilder.group({
+      fechaCreacion: hoy,
+      nombre: name,
+      email: 'andresherrerab97@gmail.com',
+      contrasena: ''
+    });
   }
 
 }
