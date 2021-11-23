@@ -1,15 +1,27 @@
 <h4>Formularios Reactivos</h4>
 
-<form [formGroup]="formGroup">
+<form [formGroup]="formGroup" (ngSubmit)="save()">
   <label for="fechaCreacion"> Fecha Creación </label>
-  <input name="fechaCreacion" type="date" formControlName="fechaCreacion" />
+  <input name="fechaCreacion" class="form-control" type="date" formControlName="fechaCreacion" />
 
   <label for="nombre"> Nombre </label>
-  <input name="nombre" type="text" formControlName="nombre" />
+  <input name="nombre" type="text" class="form-control" formControlName="nombre" />
 
   <label for="email"> Email </label>
-  <input name="email" type="email" formControlName="email" />
+  <input name="email" type="email" class="form-control" formControlName="email" />
 
   <label for="contrasena"> Contrasena </label>
-  <input name="contrasena" type="password" formControlName="contrasena" />
+  <input name="contrasena" type="password" class="form-control" formControlName="contrasena" />
+
+  <button type="submit" class="btn btn-primary" [disabled]="formGroup.invalid"> Guardar </button>
 </form>
+
+<span>
+  <pre>Nombre : {{ getError('nombre') | json }} </pre>
+</span>
+<span>
+  <pre>Email : {{ getError('email') | json }}</pre>
+</span>
+<span>
+  <pre>Contrasena : {{ getError('contrasena') | json }}</pre>
+</span>
