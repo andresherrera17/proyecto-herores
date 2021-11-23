@@ -6,13 +6,23 @@
 
   <label for="nombre"> Nombre </label>
   <input name="nombre" type="text" class="form-control" formControlName="nombre" />
-
+  <small *ngIf="usuarioNoValido" class="text-danger">
+    Es requerido
+  </small>
+  <br />
   <label for="email"> Email </label>
   <input name="email" type="email" class="form-control" formControlName="email" />
 
   <label for="contrasena"> Contrasena </label>
   <input name="contrasena" type="password" class="form-control" formControlName="contrasena" />
 
+  <div formGroupName="direccion">
+    <label for="contrasena"> Direccion </label>
+    <input name="calle" type="text" placeholder="Calle" class="form-control" formControlName="calle" />
+    <br />
+    <input name="avenida" type="text" placeholder="Avenida" class="form-control" formControlName="avenida" />
+  </div>
+  <br />
   <button type="submit" class="btn btn-primary" [disabled]="formGroup.invalid"> Guardar </button>
 </form>
 

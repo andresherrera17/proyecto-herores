@@ -26,10 +26,22 @@ export class FormularioReactivosComponent implements OnInit {
     this.formGroup = this.formBuilder.group({
       fechaCreacion: hoy,
       nombre: [name, Validators.required],
-      email: ['andresherrerab97@gmail.com', [Validators.required, Validators.email]],
+      email: ['andresherrerab97@gmail.com', [Validators.required, Validators.pattern('[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$')]],
       contrasena: ['', [Validators.required, Validators.minLength(5), this.validarContrasena]],
-
+      direccion: this.formBuilder.group({
+        calle: ['', Validators.required],
+        avenida: ['', Validators.required]
+      })
     });
+  }
+
+  objeto: {
+    nombre: '',
+    email: '',
+    direccion: {
+      calle: '',
+      avendida: ''
+    }
   }
 
   validarContrasena(control: AbstractControl) {
@@ -55,12 +67,15 @@ export class FormularioReactivosComponent implements OnInit {
     return error;
   }
 
-
+  get usuarioNoValido() {
+    return this.nombre.invalid && this.nombre.touched;
+  }
 
   save() {
     console.log(this.formGroup);
   }
 
 
+  get nombre(): AbstractControl { return this.formGroup.get('nombre') };
 
 }
