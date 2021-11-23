@@ -75,6 +75,9 @@ export class FormularioReactivosComponent implements OnInit {
     console.log(this.formGroup);
   }
 
+  reset() {
+    this.formGroup.reset({});
+  }
 
   get nombre(): AbstractControl { return this.formGroup.get('nombre') };
 
