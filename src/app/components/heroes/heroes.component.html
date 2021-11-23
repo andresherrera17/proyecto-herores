@@ -1,5 +1,8 @@
 <h1> Héroes <small>Marvel y Dc </small> </h1>
 <div class="card-columns">
+  <h4>Formulario reactivo</h4>
+  <br />
+
   <button type="button" class="btn btn-primary" (click)="agregar()"> Agregar</button>
   <app-heroe-tarjeta [heroe]="her" [index]="i" *ngFor="let her of heroes; let i = index"></app-heroe-tarjeta>
 </div>
