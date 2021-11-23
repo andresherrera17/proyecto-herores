@@ -8,12 +8,15 @@ import { FormBuilder, FormGroup } from '@angular/forms';
 })
 export class FormularioReactivosComponent implements OnInit {
 
-  formGroup: FormGroup;
+  formGroup: FormGroup = new FormGroup({});
 
 
-  constructor(private formBuilder: FormBuilder) { }
+  constructor(private formBuilder: FormBuilder) {
+
+  }
 
   ngOnInit(): void {
+    this.buildForm();
   }
 
   buildForm() {

@@ -1,1 +1,15 @@
-<p>formulario-reactivos works!</p>
+<h4>Formularios Reactivos</h4>
+
+<form [formGroup]="formGroup">
+  <label for="fechaCreacion"> Fecha Creación </label>
+  <input name="fechaCreacion" type="date" formControlName="fechaCreacion" />
+
+  <label for="nombre"> Nombre </label>
+  <input name="nombre" type="text" formControlName="nombre" />
+
+  <label for="email"> Email </label>
+  <input name="email" type="email" formControlName="email" />
+
+  <label for="contrasena"> Contrasena </label>
+  <input name="contrasena" type="password" formControlName="contrasena" />
+</form>
