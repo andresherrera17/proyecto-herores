@@ -12,9 +12,9 @@ import { HomeComponent } from './components/home/home.component';
 import { HeroesComponent } from './components/heroes/heroes.component';
 import { LoginComponent } from './components/login/login.component';
 import { AboutComponent } from './components/about/about.component';
-import { BuscadorComponent } from './components/buscador/buscador.component';
+import { BuscadorComponent } from './components/heroes/buscador/buscador.component';
 import { HeroeComponent } from './components/heroe/heroe.component';
-import { HeroeTarjetaComponent } from './components/heroe-tarjeta/heroe-tarjeta.component';
+import { HeroeTarjetaComponent } from './components/heroes/heroe-tarjeta/heroe-tarjeta.component';
 import { NavbarComponent } from './components/shared/navbar/navbar.component';
 import { ListaComponent } from './components/observables/lista/lista.component';
 import { EjemplosPipesComponent } from './components/ejemplos-pipes/ejemplos-pipes.component';
@@ -46,11 +46,8 @@ registerLocaleData(localFr);
   declarations: [ //componentes, pipes
     AppComponent,
     HomeComponent,
-    HeroesComponent,
     AboutComponent,
-    BuscadorComponent,
     HeroeComponent,
-    HeroeTarjetaComponent,
     NavbarComponent,
     ListaComponent,
     EjemplosPipesComponent,
